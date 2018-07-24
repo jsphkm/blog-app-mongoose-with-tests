@@ -38,6 +38,7 @@ function tearDownDb() {
 
 describe('Blog posts API resource', function(){
 	before(function() {
+		debugger;
 		return runServer(TEST_DATABASE_URL);
 	});
 	beforeEach(function(){
@@ -59,7 +60,7 @@ describe('Blog posts API resource', function(){
 					res = _res;
 					expect(res).to.have.status(200);
 					expect(res.body).to.have.lengthOf.at.least(1);
-					return res.body.count();
+					return BlogPost.count();
 				})
 				.then(function(count) {
 					expect(res.body).to.have.lengthOf(count);
