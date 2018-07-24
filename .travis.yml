@@ -1,4 +1,11 @@
 language: node_js
 node_js: node
 services:
-  - mongodb
+- mongodb
+deploy:
+  provider: heroku
+  api_key:
+    secure: eJ8jwQlRNqmeGJWFDM/R+pIQZ9XkslclX0BqcZ/EHDubo+PHAwMpZOuEFZn/JQ250bFLTnlVFdIBWVajRMnO2fuP94Z9UsouytBQvLTUY9CJ4nb/TjMS8x7fFQ7riQcyJL4x2i8Wwstu64Xm+ANJGUy0QbUR9oj25ykDIjoI0t9J3XHFz8HdHMT9/tU7BcbezRXjMFNUBAR/j1uy1j/FkH/eTPOX4KgUTGSKsAgpbSTfkmURoLM1J3af8I0EIRPB3j39JR07h4mb5hErK/Huc/rEV7CrkXcU8TUqWLyaTQpZmNUNKpFgljNvgQpUl948M7tNIR+r/Rj/eDmuYbS90iJnAs79sSqbguWdgQ0l5i+SDkZsNR0+QxNqq+BfM9JPT0ndvD/IX0UEZ6Ie5nPibPOjw3MqwP/CrEIsNdVbetUYb79+LYfKapk6CWSBIrpQcvbzCmVSC2iZAziFVGqxJTX0rk98LWjSeCutlMIXCLVrk9A+/ACmq8teQvy+AHs7EaFKay7TyimptXIXbTdYgYCayLd8LBoZKADEulSWbKKuUtbldkpKYKWBKT4Z4NllLCmPob/gufdxo1LDqcjNSeyanI5mE5F8Xpxg31VGZEUqdJWa+lALfC1TD6KEgqvcvs4Um46Ntw6ujkOiGeIIzHfXWCJ8hVXSW32wTKO7+j0=
+  app: damp-temple-54771
+  on:
+    repo: jsphkm/blog-app-mongoose-with-tests
