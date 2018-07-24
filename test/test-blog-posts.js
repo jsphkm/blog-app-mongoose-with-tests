@@ -25,10 +25,10 @@ function generateBlogPostData(){
 		title: faker.lorem.sentence(),
   	content: faker.lorem.text(),
     author: {
-			firstName: faker.name.firstName,
-			lastName: faker.name.lastName
+			firstName: faker.name.firstName(),
+			lastName: faker.name.lastName()
 		}
-	}
+	};
 }
 
 function tearDownDb() {
@@ -87,11 +87,9 @@ describe('Blog posts API resource', function(){
 					return BlogPost.findById(resPost.id);
 				})
 				.then(function(post) {
-					expect(resPost.id).to.equal(post.id);
-					expect(resPost.author).to.equal(post.author);
+					expect(resPost.author).to.equal(post.authorName);
 					expect(resPost.content).to.equal(post.content);
 					expect(resPost.title).to.equal(post.title);
-					expect(resPost.created).to.equal(post.created);
 				});
 		});
 	});
